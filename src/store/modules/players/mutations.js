@@ -6,5 +6,8 @@ export default {
   },
   [types.LOAD_PLAYERS] (state, players) {
     state.players = state.players.concat(players)
+  },
+  [types.DELETE_PLAYER] (state, playerId) {
+    state.players = state.players.filter(player => player.id !== playerId)
   }
 }

@@ -12,3 +12,9 @@ export const loadPlayers = ({ commit }) => {
     .then(players => commit(types.LOAD_PLAYERS, players))
     .catch(e => console.error(e))
 }
+
+export const deletePlayer = ({ commit }, playerId) => {
+  return playersApi.deletePlayer(playerId)
+    .then(() => commit(types.DELETE_PLAYER, playerId))
+    .catch(e => console.error(e))
+}

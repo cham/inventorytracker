@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import ConfirmationModal from '../utility/ConfirmationModal'
 
 export default {
@@ -45,6 +45,7 @@ export default {
   },
   data () {
     return {
+      idToDelete: null,
       confirmDeletePlayer: false
     }
   },
@@ -54,7 +55,15 @@ export default {
     })
   },
   methods: {
+    ...mapActions([
+      'deletePlayer'
+    ]),
     doDeletePlayer () {
+      if (!this.idToDelete) {
+        return
+      }
+      this.deletePlayer(this.idToDelete)
+      this.idToDelete = null
     },
     playerEncumbranceType (player) {
       if (player.totalWeight >= player.strength * 15) {
