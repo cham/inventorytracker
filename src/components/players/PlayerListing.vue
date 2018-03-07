@@ -4,9 +4,8 @@
       <thead>
         <tr>
           <th>Name</th>
-          <th>Strength</th>
-          <th>Base Movement</th>
-          <th>Total Weight</th>
+          <th>Str</th>
+          <th>Weight</th>
           <th>Encumbrance</th>
           <th>Movement</th>
           <th></th>
@@ -16,7 +15,6 @@
         <tr v-for="player in players" :key="player.id">
           <td>{{player.name}}</td>
           <td>{{player.strength}}</td>
-          <td>{{player.movement}}</td>
           <td>{{player.totalWeight}}</td>
           <td>{{playerEncumbranceType(player)}}</td>
           <td>{{playerAvailableMovement(player)}}</td>
@@ -82,12 +80,12 @@ export default {
         return 0
       }
       if (player.totalWeight >= player.strength * 10) {
-        return player.speed - 20
+        return player.movement - 20
       }
       if (player.totalWeight >= player.strength * 5) {
-        return player.speed - 10
+        return player.movement - 10
       }
-      return player.speed
+      return player.movement
     }
   }
 }
