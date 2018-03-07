@@ -5,6 +5,7 @@
       <button @click="onClickItems" class="toggle-items">Items</button>
     </header>
     <section ref="players" class="content-area players">
+      <add-player></add-player>
       <player-listing></player-listing>
     </section>
     <section ref="items" class="content-area items">
@@ -17,12 +18,14 @@
 <script>
 import AddItem from './components/items/AddItem'
 import ItemListing from './components/items/ItemListing'
+import AddPlayer from './components/players/AddPlayer'
 import PlayerListing from './components/players/PlayerListing'
 
 export default {
   components: {
     AddItem,
     ItemListing,
+    AddPlayer,
     PlayerListing
   },
   methods: {
@@ -37,6 +40,7 @@ export default {
   },
   created () {
     this.$store.dispatch('loadItems')
+      .then(() => this.$store.dispatch('loadPlayers'))
   }
 }
 </script>
