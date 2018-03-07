@@ -5,6 +5,7 @@
       <button @click="onClickItems" class="toggle-items">Items</button>
     </header>
     <section ref="players" class="content-area players">
+      <player-listing></player-listing>
     </section>
     <section ref="items" class="content-area items">
       <add-item></add-item>
@@ -16,11 +17,13 @@
 <script>
 import AddItem from './components/items/AddItem'
 import ItemListing from './components/items/ItemListing'
+import PlayerListing from './components/players/PlayerListing'
 
 export default {
   components: {
     AddItem,
-    ItemListing
+    ItemListing,
+    PlayerListing
   },
   methods: {
     onClickPlayers () {
@@ -53,13 +56,12 @@ export default {
   bottom: 0;
   transition: left ease-out 0.2s;
   width: 100%;
+  overflow: auto;
 }
 .players {
-  background: red;
   left: 0;
 }
 .items {
-  background: #fef;
   left: 100%;
 }
 </style>
