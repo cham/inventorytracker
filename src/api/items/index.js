@@ -1,4 +1,5 @@
 import * as db from '../../db'
+import { generateId } from '../../utils/uuidv4'
 import * as baseItems from './base.json'
 
 export const getItems = () => getCustomItems()
@@ -16,9 +17,14 @@ export const getCustomItems = () => db.findOne({ items: { $exists: true } })
     return []
   })
 
-export const addCustomItem = item => getCustomItems()
-  .then(items => items.concat({
+export const addCustomItem = item => {
+  const itemData = {
     ...item,
+    id: generateId(),
     type: 'custom'
-  }))
-  .then(items => db.insertOrPatch({ items: { $exists: true } }, { items }))
+  }
+  return getCustomItems()
+    .then(items => items.concat(itemData))
+    .then(items => db.insertOrPatch({ items: { $exists: true } }, { items }))
+    .then(() => itemData)
+}

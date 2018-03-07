@@ -3,7 +3,7 @@ import * as itemsApi from '../../../api/items'
 
 export const addItem = ({ commit }, item) => {
   return itemsApi.addCustomItem(item)
-    .then(() => commit(types.ADD_ITEM, item))
+    .then(newItem => commit(types.ADD_ITEM, newItem))
     .catch(e => console.error(e))
 }
 
