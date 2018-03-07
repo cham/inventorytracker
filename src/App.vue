@@ -7,16 +7,19 @@
     <section ref="players" class="content-area players">
     </section>
     <section ref="items" class="content-area items">
+      <add-item></add-item>
       <item-listing></item-listing>
     </section>
   </div>
 </template>
 
 <script>
+import AddItem from './components/items/AddItem'
 import ItemListing from './components/items/ItemListing'
 
 export default {
   components: {
+    AddItem,
     ItemListing
   },
   methods: {

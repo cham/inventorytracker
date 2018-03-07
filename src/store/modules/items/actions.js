@@ -1,7 +1,7 @@
 import * as types from '../../mutation-types'
 import * as itemsApi from '../../../api/items'
 
-export const addPlayer = ({ commit }, item) => {
+export const addItem = ({ commit }, item) => {
   commit(types.ADD_ITEM, item)
 }
 
