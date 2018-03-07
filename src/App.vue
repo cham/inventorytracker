@@ -22,6 +22,9 @@ export default {
       this.$refs.players.style.left = '-100%'
       this.$refs.items.style.left = '0%'
     }
+  },
+  created () {
+    this.$store.dispatch('loadItems')
   }
 }
 </script>
