@@ -9,3 +9,7 @@ export const loadItems = ({ commit }) => {
   return itemsApi.getItems()
     .then(items => commit(types.LOAD_ITEMS, items))
 }
+
+export const searchItems = ({ commit }, term) => {
+  commit(types.SEARCH_ITEMS, term)
+}

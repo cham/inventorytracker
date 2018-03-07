@@ -14,13 +14,23 @@ const sortItems = (state) => {
   })
 }
 
+const filterItems = (state) => {
+  state.filteredItems = state.items.filter(item => item.name.toLowerCase().indexOf(state.searchTerm) > -1)
+}
+
 export default {
   [types.ADD_ITEM] (state, item) {
     state.items.push(item)
     sortItems(state)
+    filterItems(state)
   },
   [types.LOAD_ITEMS] (state, items) {
     state.items = state.items.concat(items)
     sortItems(state)
+    filterItems(state)
+  },
+  [types.SEARCH_ITEMS] (state, term) {
+    state.searchTerm = term.toLowerCase()
+    filterItems(state)
   }
 }
