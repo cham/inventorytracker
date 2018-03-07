@@ -15,7 +15,7 @@
           <td>{{item.cost}} gp</td>
           <td>{{item.weight}} lb.</td>
           <td>
-            <button v-if="item.type === 'custom'" @click="confirmDeleteItem = true;idToDelete = item.id">Delete</button>
+            <button :disabled="item.type !== 'custom'" @click="confirmDeleteItem = true;idToDelete = item.id">Delete</button>
           </td>
         </tr>
       </tbody>
