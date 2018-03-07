@@ -32,5 +32,10 @@ export default {
   [types.SEARCH_ITEMS] (state, term) {
     state.searchTerm = term.toLowerCase()
     filterItems(state)
+  },
+  [types.DELETE_ITEM] (state, itemId) {
+    state.items = state.items.filter(item => item.id !== itemId)
+    sortItems(state)
+    filterItems(state)
   }
 }

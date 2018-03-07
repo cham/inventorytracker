@@ -28,3 +28,9 @@ export const addCustomItem = item => {
     .then(items => db.insertOrPatch({ items: { $exists: true } }, { items }))
     .then(() => itemData)
 }
+
+export const deleteItem = itemId => {
+  return getCustomItems()
+    .then(items => items.filter(item => item.id !== itemId))
+    .then(items => db.insertOrPatch({ items: { $exists: true } }, { items }))
+}

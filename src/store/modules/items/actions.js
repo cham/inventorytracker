@@ -16,3 +16,9 @@ export const loadItems = ({ commit }) => {
 export const searchItems = ({ commit }, term) => {
   commit(types.SEARCH_ITEMS, term)
 }
+
+export const deleteItem = ({ commit }, itemId) => {
+  return itemsApi.deleteItem(itemId)
+    .then(() => commit(types.DELETE_ITEM, itemId))
+    .catch(e => console.error(e))
+}
