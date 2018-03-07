@@ -1,8 +1,6 @@
 import * as NeDB from 'nedb'
 import path from 'path'
 
-console.log(NeDB)
-
 /* eslint-disable new-cap */
 const db = new NeDB({
   filename: path.join(__dirname, '../../database.db')
