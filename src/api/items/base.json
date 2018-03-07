@@ -1,6 +1,67 @@
 {
-  "a": {
-    "name": "Test",
-    "weight": 2
+  "BASE1": {
+    "name": "Padded armor",
+    "cost": 5,
+    "weight": 8
+  },
+  "BASE2": {
+    "name": "Leather armor",
+    "cost": 10,
+    "weight": 10
+  },
+  "BASE3": {
+    "name": "Studded leather armor",
+    "cost": 45,
+    "weight": 13
+  },
+  "BASE4": {
+    "name": "Hide armor",
+    "cost": 10,
+    "weight": 12
+  },
+  "BASE5": {
+    "name": "Chain shirt armor",
+    "cost": 50,
+    "weight": 20
+  },
+  "BASE6": {
+    "name": "Scale mail armor",
+    "cost": 50,
+    "weight": 45
+  },
+  "BASE7": {
+    "name": "Breastplate armor",
+    "cost": 400,
+    "weight": 20
+  },
+  "BASE8": {
+    "name": "Half plate armor",
+    "cost": 750,
+    "weight": 40
+  },
+  "BASE9": {
+    "name": "Ring mail armor",
+    "cost": 30,
+    "weight": 40
+  },
+  "BASE10": {
+    "name": "Chain mail armor",
+    "cost": 75,
+    "weight": 55
+  },
+  "BASE11": {
+    "name": "Splint armor",
+    "cost": 200,
+    "weight": 60
+  },
+  "BASE12": {
+    "name": "Plate armor",
+    "cost": 1500,
+    "weight": 65
+  },
+  "BASE13": {
+    "name": "Shield",
+    "cost": 10,
+    "weight": 6
   }
 }
