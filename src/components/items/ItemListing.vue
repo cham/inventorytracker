@@ -1,8 +1,8 @@
 <template>
-  <table v-if="items.length">
+  <table>
     <thead>
       <tr>
-        <th><input @keyup="doSearchItems" ref="searchfield" type="search" placeholder="Name"></th>
+        <th><input @search="doSearchItems" @keyup="doSearchItems" ref="searchfield" type="search" placeholder="Name"></th>
         <th>Cost</th>
         <th>Weight</th>
       </tr>
