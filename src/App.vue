@@ -7,12 +7,18 @@
     <section ref="players" class="content-area players">
     </section>
     <section ref="items" class="content-area items">
+      <item-listing></item-listing>
     </section>
   </div>
 </template>
 
 <script>
+import ItemListing from './components/items/ItemListing'
+
 export default {
+  components: {
+    ItemListing
+  },
   methods: {
     onClickPlayers () {
       this.$refs.players.style.left = '0%'
