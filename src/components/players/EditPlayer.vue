@@ -14,6 +14,7 @@
     </p>
     <p>
       <label>Inventory</label>
+      <player-inventory v-bind:player="player"></player-inventory>
     </p>
     <p>
       <button @click="doEditPlayer">Edit</button>
@@ -23,9 +24,13 @@
 
 <script>
 import { mapActions } from 'vuex'
+import PlayerInventory from './PlayerInventory'
 
 export default {
   props: ['player'],
+  components: {
+    PlayerInventory
+  },
   data () {
     return {
       name: this.player.name,

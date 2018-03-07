@@ -39,3 +39,25 @@ export const editPlayer = (playerId, playerData) => {
       })
     }))
 }
+
+export const addPlayerInventory = (playerId, { itemId, quantity }) => {
+  return getPlayers()
+    .then(players => db.insertOrPatch({ players: { $exists: true } }, {
+      players: players.map((player) => {
+        let found = false
+        if (player.id === playerId) {
+          player.inventory = player.inventory.map((item) => {
+            if (item.id === itemId) {
+              item.quantity += quantity
+              found = true
+            }
+            return item
+          })
+          if (!found) {
+            player.inventory.push({ id: itemId, quantity })
+          }
+        }
+        return player
+      })
+    }))
+}

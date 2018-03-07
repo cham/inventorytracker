@@ -24,3 +24,9 @@ export const editPlayer = ({ commit }, playerData) => {
     .then(() => commit(types.EDIT_PLAYER, playerData))
     .catch(e => console.error(e))
 }
+
+export const addPlayerInventory = ({ commit }, { playerId, itemId, quantity }) => {
+  return playersApi.addPlayerInventory(playerId, { itemId, quantity })
+    .then(() => commit(types.ADD_PLAYER_INVENTORY, { playerId, itemId, quantity }))
+    .catch(e => console.error(e))
+}
