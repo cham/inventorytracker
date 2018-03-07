@@ -1,6 +1,6 @@
 <template>
   <transition name="modal">
-    <div class="modal-mask">
+    <div v-bind:class="{ 'modal-mask': true, 'modal-large': modalSize === 'large' }">
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
@@ -22,6 +22,12 @@
 
 <script>
 export default {
+  props: ['size'],
+  data () {
+    return {
+      modalSize: this.size || 'normal'
+    }
+  },
   methods: {
     onKeyPress (e) {
       if (e.key === 'Escape') {
@@ -64,6 +70,9 @@ export default {
   font-size: 1rem;
   background: #fff;
   padding: 10px 20px;
+}
+.modal-large .modal-container {
+  width: 720px;
 }
 
 /* transition */

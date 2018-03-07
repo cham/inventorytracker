@@ -27,3 +27,15 @@ export const deletePlayer = playerId => {
     .then(players => players.filter(player => player.id !== playerId))
     .then(players => db.insertOrPatch({ players: { $exists: true } }, { players }))
 }
+
+export const editPlayer = (playerId, playerData) => {
+  return getPlayers()
+    .then(players => db.insertOrPatch({ players: { $exists: true } }, {
+      players: players.map((player) => {
+        if (player.id === playerId) {
+          Object.keys(playerData).forEach((key) => { player[key] = playerData[key] })
+        }
+        return player
+      })
+    }))
+}

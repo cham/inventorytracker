@@ -19,7 +19,7 @@
           <td>{{playerEncumbranceType(player)}}</td>
           <td>{{playerAvailableMovement(player)}}</td>
           <td>
-            <button>Edit</button>
+            <button @click="showEditPlayer = true;playerToEdit = player">Edit</button>
             <button @click="confirmDeletePlayer = true;idToDelete = player.id">Delete</button>
           </td>
         </tr>
@@ -30,20 +30,32 @@
       @confirm="confirmDeletePlayer = false;doDeletePlayer()"
       @cancel="confirmDeletePlayer = false;idToDelete = null"
     ></confirmation-modal>
+    <modal v-if="showEditPlayer" @cancel="showEditPlayer = false" v-bind:size="'large'">
+      <h3 slot="header">Edit {{playerToEdit.name}}</h3>
+      <div slot="body">
+        <edit-player v-bind:player="playerToEdit" @cancel="showEditPlayer = false"></edit-player>
+      </div>
+    </modal>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import ConfirmationModal from '../utility/ConfirmationModal'
+import Modal from '../utility/Modal'
+import EditPlayer from './EditPlayer'
 
 export default {
   components: {
-    ConfirmationModal
+    ConfirmationModal,
+    Modal,
+    EditPlayer
   },
   data () {
     return {
       idToDelete: null,
+      playerToEdit: null,
+      showEditPlayer: false,
       confirmDeletePlayer: false
     }
   },

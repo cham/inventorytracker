@@ -9,5 +9,13 @@ export default {
   },
   [types.DELETE_PLAYER] (state, playerId) {
     state.players = state.players.filter(player => player.id !== playerId)
+  },
+  [types.EDIT_PLAYER] (state, playerData) {
+    state.players = state.players.map((player) => {
+      if (player.id === playerData.id) {
+        Object.keys(playerData).forEach((key) => { player[key] = playerData[key] })
+      }
+      return player
+    })
   }
 }

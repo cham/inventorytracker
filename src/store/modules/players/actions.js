@@ -18,3 +18,9 @@ export const deletePlayer = ({ commit }, playerId) => {
     .then(() => commit(types.DELETE_PLAYER, playerId))
     .catch(e => console.error(e))
 }
+
+export const editPlayer = ({ commit }, playerData) => {
+  return playersApi.editPlayer(playerData.id, playerData)
+    .then(() => commit(types.EDIT_PLAYER, playerData))
+    .catch(e => console.error(e))
+}
