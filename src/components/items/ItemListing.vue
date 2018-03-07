@@ -1,23 +1,20 @@
 <template>
-  <div>
-    <input @keyup="doSearchItems" ref="searchfield" type="search" placeholder="Search">
-    <table v-if="items.length">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Cost</th>
-          <th>Weight</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in items" :key="item.id">
-          <td>{{item.name}}</td>
-          <td>{{item.cost}} gp</td>
-          <td>{{item.weight}} lb.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table v-if="items.length">
+    <thead>
+      <tr>
+        <th><input @keyup="doSearchItems" ref="searchfield" type="search" placeholder="Name"></th>
+        <th>Cost</th>
+        <th>Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="item in items" :key="item.id">
+        <td>{{item.name}}</td>
+        <td>{{item.cost}} gp</td>
+        <td>{{item.weight}} lb.</td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <script>
@@ -41,5 +38,8 @@ export default {
 <style scoped>
 table {
   width: 100%;
+}
+th {
+  text-align: left;
 }
 </style>
