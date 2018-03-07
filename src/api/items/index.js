@@ -1,5 +1,8 @@
 import * as baseItems from './base.json'
 
 export const getItems = () => new Promise((resolve, reject) => {
-  resolve(baseItems)
+  resolve(Object.keys(baseItems).map(itemId => ({
+    ...baseItems[itemId],
+    id: itemId
+  })))
 })
