@@ -2,12 +2,15 @@ import * as types from '../../mutation-types'
 import * as itemsApi from '../../../api/items'
 
 export const addItem = ({ commit }, item) => {
-  commit(types.ADD_ITEM, item)
+  return itemsApi.addCustomItem(item)
+    .then(() => commit(types.ADD_ITEM, item))
+    .catch(e => console.error(e))
 }
 
 export const loadItems = ({ commit }) => {
   return itemsApi.getItems()
     .then(items => commit(types.LOAD_ITEMS, items))
+    .catch(e => console.error(e))
 }
 
 export const searchItems = ({ commit }, term) => {
