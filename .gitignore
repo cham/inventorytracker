@@ -1,4 +1,5 @@
 .DS_Store
+release-builds/
 node_modules/
 /dist/
 npm-debug.log*
