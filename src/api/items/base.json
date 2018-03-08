@@ -844,7 +844,7 @@
     "cost": 0.1,
     "weight": 0
   },
-  "BASE170": {
+  "BASE185": {
     "name": "Dragonchess set",
     "cost": 1,
     "weight": 0.5
@@ -924,7 +924,7 @@
     "cost": 50,
     "weight": 2
   },
-  "BASE184": {
+  "BASE186": {
     "name": "Thieves' tools",
     "cost": 25,
     "weight": 1
