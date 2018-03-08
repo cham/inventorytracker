@@ -743,5 +743,190 @@
     "name": "Whetstone",
     "cost": 0.01,
     "weight": 1
+  },
+  "BASE150": {
+    "name": "Alchemist's supplies",
+    "cost": 50,
+    "weight": 8
+  },
+  "BASE151": {
+    "name": "Brewer's supplies",
+    "cost": 20,
+    "weight": 9
+  },
+  "BASE152": {
+    "name": "Calligrapher's supplies",
+    "cost": 10,
+    "weight": 5
+  },
+  "BASE153": {
+    "name": "Carpenter's tools",
+    "cost": 8,
+    "weight": 6
+  },
+  "BASE154": {
+    "name": "Cartographer's tools",
+    "cost": 15,
+    "weight": 6
+  },
+  "BASE155": {
+    "name": "Cobbler's tools",
+    "cost": 5,
+    "weight": 5
+  },
+  "BASE156": {
+    "name": "Cook's utensils",
+    "cost": 1,
+    "weight": 8
+  },
+  "BASE157": {
+    "name": "Glassblower's tools",
+    "cost": 30,
+    "weight": 5
+  },
+  "BASE158": {
+    "name": "Jeweler's tools",
+    "cost": 25,
+    "weight": 2
+  },
+  "BASE159": {
+    "name": "Leatherworker's tools",
+    "cost": 5,
+    "weight": 5
+  },
+  "BASE160": {
+    "name": "Mason's tools",
+    "cost": 10,
+    "weight": 8
+  },
+  "BASE161": {
+    "name": "Painter's supplies",
+    "cost": 10,
+    "weight": 5
+  },
+  "BASE162": {
+    "name": "Potter's tools",
+    "cost": 10,
+    "weight": 3
+  },
+  "BASE163": {
+    "name": "Smith's tools",
+    "cost": 20,
+    "weight": 8
+  },
+  "BASE164": {
+    "name": "Tinker's tools",
+    "cost": 50,
+    "weight": 10
+  },
+  "BASE165": {
+    "name": "Weaver's tools",
+    "cost": 1,
+    "weight": 5
+  },
+  "BASE166": {
+    "name": "Woodcarver's tools",
+    "cost": 1,
+    "weight": 5
+  },
+  "BASE167": {
+    "name": "Disguise kit",
+    "cost": 25,
+    "weight": 3
+  },
+  "BASE168": {
+    "name": "Forgery kit",
+    "cost": 15,
+    "weight": 5
+  },
+  "BASE169": {
+    "name": "Dice set",
+    "cost": 0.1,
+    "weight": 0
+  },
+  "BASE170": {
+    "name": "Dragonchess set",
+    "cost": 1,
+    "weight": 0.5
+  },
+  "BASE170": {
+    "name": "Playing card set",
+    "cost": 0.5,
+    "weight": 0
+  },
+  "BASE171": {
+    "name": "Three-Dragon Ante set",
+    "cost": 1,
+    "weight": 0
+  },
+  "BASE172": {
+    "name": "Herbalism kit",
+    "cost": 5,
+    "weight": 3
+  },
+  "BASE173": {
+    "name": "Bagpipes",
+    "cost": 30,
+    "weight": 6
+  },
+  "BASE174": {
+    "name": "Drum",
+    "cost": 6,
+    "weight": 3
+  },
+  "BASE175": {
+    "name": "Dulcimer",
+    "cost": 25,
+    "weight": 10
+  },
+  "BASE176": {
+    "name": "Flute",
+    "cost": 2,
+    "weight": 1
+  },
+  "BASE177": {
+    "name": "Lute",
+    "cost": 25,
+    "weight": 2
+  },
+  "BASE178": {
+    "name": "Lyre",
+    "cost": 30,
+    "weight": 2
+  },
+  "BASE179": {
+    "name": "Horn",
+    "cost": 3,
+    "weight": 2
+  },
+  "BASE180": {
+    "name": "Pan flute",
+    "cost": 12,
+    "weight": 2
+  },
+  "BASE181": {
+    "name": "Shawm",
+    "cost": 2,
+    "weight": 1
+  },
+  "BASE182": {
+    "name": "Viol",
+    "cost": 30,
+    "weight": 1
+  },
+  "BASE183": {
+    "name": "Navigator's tools",
+    "cost": 25,
+    "weight": 2
+  },
+  "BASE184": {
+    "name": "Poisoner's kit",
+    "cost": 50,
+    "weight": 2
+  },
+  "BASE184": {
+    "name": "Thieves' tools",
+    "cost": 25,
+    "weight": 1
   }
 }
