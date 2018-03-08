@@ -1,4 +1,5 @@
 import * as db from '../../db'
+import * as itemsApi from '../items'
 import { generateId } from '../../utils/uuidv4'
 
 export const getPlayers = () => db.findOne({ players: { $exists: true } })
@@ -41,23 +42,38 @@ export const editPlayer = (playerId, playerData) => {
 }
 
 export const addPlayerInventory = (playerId, { itemId, quantity }) => {
-  return getPlayers()
-    .then(players => db.insertOrPatch({ players: { $exists: true } }, {
-      players: players.map((player) => {
-        let found = false
-        if (player.id === playerId) {
+  let updatedPlayerData
+  return Promise.all([ itemsApi.getItems(), getPlayers() ])
+    .then((itemAndPlayerData) => {
+      const items = itemAndPlayerData[0]
+      const players = itemAndPlayerData[1]
+      return db.insertOrPatch({ players: { $exists: true } }, {
+        players: players.map((player) => {
+          let found = false
+          if (player.id !== playerId) {
+            return player
+          }
           player.inventory = player.inventory.map((item) => {
             if (item.id === itemId) {
               item.quantity += quantity
               found = true
             }
             return item
-          })
-          if (!found) {
+          }).filter(item => item.quantity > 0)
+          if (!found && quantity > 0) {
             player.inventory.push({ id: itemId, quantity })
           }
-        }
-        return player
+          player.totalWeight = player.inventory.reduce((memo, ownedItem) => {
+            const foundItem = items.find(item => item.id === ownedItem.id)
+            if (foundItem) {
+              memo += foundItem.weight * ownedItem.quantity
+            }
+            return memo
+          }, 0)
+          updatedPlayerData = player
+          return player
+        })
       })
-    }))
+    })
+    .then(() => updatedPlayerData)
 }

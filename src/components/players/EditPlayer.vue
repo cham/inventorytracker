@@ -61,5 +61,6 @@ export default {
 label {
   display: inline-block;
   width: 100px;
+  vertical-align: top;
 }
 </style>

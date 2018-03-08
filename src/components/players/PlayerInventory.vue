@@ -10,7 +10,7 @@
       <button @click="onAddInventoryItem">Add</button>
     </fieldset>
     <div v-for="item in player.inventory" :key="item.id">
-      {{item.id}} x {{item.quantity}}
+      {{getItemName(item.id)}} x {{item.quantity}}
     </div>
   </div>
 </template>
@@ -32,6 +32,13 @@ export default {
     ...mapActions([
       'addPlayerInventory'
     ]),
+    getItemName (itemId) {
+      const item = this.items.find(item => item.id === itemId)
+      if (!item) {
+        return `Unknown item id:${itemId}`
+      }
+      return item.name
+    },
     onNameKeyup () {
       const name = this.$refs.newitemname.value
       const prefillItem = this.items.find(item => !!item.name.match(new RegExp(name, 'i')))

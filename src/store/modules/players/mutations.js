@@ -17,23 +17,5 @@ export default {
       }
       return player
     })
-  },
-  [types.ADD_PLAYER_INVENTORY] (state, { playerId, itemId, quantity }) {
-    state.players = state.players.map((player) => {
-      let found = false
-      if (player.id === playerId) {
-        player.inventory = player.inventory.map((item) => {
-          if (item.id === itemId) {
-            item.quantity += quantity
-            found = true
-          }
-          return item
-        })
-        if (!found) {
-          player.inventory.push({ id: itemId, quantity })
-        }
-      }
-      return player
-    })
   }
 }
