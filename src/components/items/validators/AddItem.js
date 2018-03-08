@@ -11,14 +11,14 @@ export default (instance) => {
     instance.$refs.namefield.classList.remove('invalid')
   }
 
-  if (!cost) {
+  if (!cost && cost !== 0) {
     instance.$refs.costfield.classList.add('invalid')
     valid = false
   } else {
     instance.$refs.costfield.classList.remove('invalid')
   }
 
-  if (!weight) {
+  if (!weight && weight !== 0) {
     instance.$refs.weightfield.classList.add('invalid')
     valid = false
   } else {
