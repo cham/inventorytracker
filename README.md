@@ -1,6 +1,6 @@
 # inventorytracker
 
-> Simple D&D inventory and encumbrance tracker
+> D&D Inventory Tracker
 
 ## Build Setup
 
@@ -16,6 +16,16 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# build and run as an electron app
+npm start
+
+# build application for linux
+npm run build-package:linux
+
+# build application for OSX
+npm run build-package:osx
+
+# build application for windows
+npm run build-package:windows
+```
