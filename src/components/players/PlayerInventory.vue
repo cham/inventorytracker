@@ -18,6 +18,25 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
+const getPrefillItemName = (items, search) => {
+  const matchingItems = items.filter(item => !!item.name.match(new RegExp(search, 'i')))
+  if (!matchingItems.length || !search) {
+    return null
+  }
+  matchingItems.sort((a, b) => {
+    const aLen = a.name.length
+    const bLen = b.name.length
+    if (aLen > bLen) {
+      return 1
+    }
+    if (aLen < bLen) {
+      return -1
+    }
+    return 0
+  })
+  return matchingItems[0].name
+}
+
 export default {
   props: ['player'],
   data () {
@@ -41,9 +60,9 @@ export default {
     },
     onNameKeyup () {
       const name = this.$refs.newitemname.value
-      const prefillItem = this.items.find(item => !!item.name.match(new RegExp(name, 'i')))
+      const prefillItem = getPrefillItemName(this.items, name)
       if (prefillItem) {
-        this.prefillName = prefillItem.name
+        this.prefillName = prefillItem
         this.$refs.prefilltext.style.display = 'inline-block'
       } else {
         this.prefillName = ''
