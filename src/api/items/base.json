@@ -248,5 +248,245 @@
     "name": "Net",
     "cost": 1,
     "weight": 3
+  },
+  "BASE51": {
+    "name": "Abacus",
+    "cost": 2,
+    "weight": 2
+  },
+  "BASE52": {
+    "name": "Acid (vial)",
+    "cost": 25,
+    "weight": 1
+  },
+  "BASE53": {
+    "name": "Alchemist's fire (flask)",
+    "cost": 50,
+    "weight": 1
+  },
+  "BASE54": {
+    "name": "Arrows (20)",
+    "cost": 1,
+    "weight": 1
+  },
+  "BASE55": {
+    "name": "Blowgun needles (50)",
+    "cost": 1,
+    "weight": 1
+  },
+  "BASE56": {
+    "name": "Crossbow bolts (20)",
+    "cost": 1,
+    "weight": 1.5
+  },
+  "BASE57": {
+    "name": "Sling bullets (20)",
+    "cost": 0.04,
+    "weight": 1.5
+  },
+  "BASE58": {
+    "name": "Antitoxin (vial)",
+    "cost": 50,
+    "weight": 0
+  },
+  "BASE59": {
+    "name": "Arcane Focus (Crystal)",
+    "cost": 10,
+    "weight": 1
+  },
+  "BASE60": {
+    "name": "Arcane Focus (Orb)",
+    "cost": 20,
+    "weight": 3
+  },
+  "BASE61": {
+    "name": "Arcane Focus (Rod)",
+    "cost": 10,
+    "weight": 2
+  },
+  "BASE62": {
+    "name": "Arcane Focus (Staff)",
+    "cost": 5,
+    "weight": 4
+  },
+  "BASE63": {
+    "name": "Arcane Focus (Wand)",
+    "cost": 10,
+    "weight": 1
+  },
+  "BASE64": {
+    "name": "Backpack",
+    "cost": 2,
+    "weight": 5
+  },
+  "BASE65": {
+    "name": "Ball bearings (bag of 1000)",
+    "cost": 1,
+    "weight": 2
+  },
+  "BASE66": {
+    "name": "Barrel",
+    "cost": 2,
+    "weight": 70
+  },
+  "BASE67": {
+    "name": "Basket",
+    "cost": 0.4,
+    "weight": 2
+  },
+  "BASE68": {
+    "name": "Bedroll",
+    "cost": 1,
+    "weight": 7
+  },
+  "BASE69": {
+    "name": "Bell",
+    "cost": 1,
+    "weight": 0
+  },
+  "BASE70": {
+    "name": "Blanket",
+    "cost": 0.5,
+    "weight": 3
+  },
+  "BASE71": {
+    "name": "Block and tackle",
+    "cost": 1,
+    "weight": 5
+  },
+  "BASE72": {
+    "name": "Book",
+    "cost": 25,
+    "weight": 5
+  },
+  "BASE73": {
+    "name": "Bottle, glass",
+    "cost": 2,
+    "weight": 2
+  },
+  "BASE74": {
+    "name": "Bucket",
+    "cost": 0.05,
+    "weight": 2
+  },
+  "BASE75": {
+    "name": "Caltrops (bag of 20)",
+    "cost": 1,
+    "weight": 2
+  },
+  "BASE76": {
+    "name": "Candle",
+    "cost": 0.01,
+    "weight": 0
+  },
+  "BASE77": {
+    "name": "Case, crossbow bolt",
+    "cost": 1,
+    "weight": 1
+  },
+  "BASE78": {
+    "name": "Case, map or scroll",
+    "cost": 1,
+    "weight": 1
+  },
+  "BASE79": {
+    "name": "Chain (10 feet)",
+    "cost": 5,
+    "weight": 10
+  },
+  "BASE80": {
+    "name": "Chalk (1 piece)",
+    "cost": 0.01,
+    "weight": 0
+  },
+  "BASE81": {
+    "name": "Chest",
+    "cost": 5,
+    "weight": 25
+  },
+  "BASE82": {
+    "name": "Climber's kit",
+    "cost": 25,
+    "weight": 12
+  },
+  "BASE83": {
+    "name": "Clothes, common",
+    "cost": 0.5,
+    "weight": 3
+  },
+  "BASE84": {
+    "name": "Clothes, costume",
+    "cost": 5,
+    "weight": 4
+  },
+  "BASE85": {
+    "name": "Clothes, fine",
+    "cost": 15,
+    "weight": 6
+  },
+  "BASE86": {
+    "name": "Clothes, traveler's",
+    "cost": 2,
+    "weight": 4
+  },
+  "BASE87": {
+    "name": "Component pouch",
+    "cost": 25,
+    "weight": 2
+  },
+  "BASE88": {
+    "name": "Crowbar",
+    "cost": 2,
+    "weight": 5
+  },
+  "BASE89": {
+    "name": "Druidic focus (Sprig of mistletoe)",
+    "cost": 1,
+    "weight": 0
+  },
+  "BASE90": {
+    "name": "Druidic focus (Totem)",
+    "cost": 1,
+    "weight": 0
+  },
+  "BASE91": {
+    "name": "Druidic focus (Wooden staff)",
+    "cost": 5,
+    "weight": 4
+  },
+  "BASE92": {
+    "name": "Druidic focus (Yew wand)",
+    "cost": 10,
+    "weight": 1
+  },
+  "BASE93": {
+    "name": "Fishing tackle",
+    "cost": 1,
+    "weight": 4
+  },
+  "BASE94": {
+    "name": "Flask or tankard",
+    "cost": 0.02,
+    "weight": 1
+  },
+  "BASE95": {
+    "name": "Grappling hook",
+    "cost": 2,
+    "weight": 4
+  },
+  "BASE96": {
+    "name": "Hammer",
+    "cost": 1,
+    "weight": 3
+  },
+  "BASE97": {
+    "name": "Hammer, sledge",
+    "cost": 2,
+    "weight": 10
+  },
+  "BASE98": {
+    "name": "Healer's kit",
+    "cost": 5,
+    "weight": 3
   }
 }
