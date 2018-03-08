@@ -54,6 +54,9 @@ export default {
   bottom: 0;
   overflow: hidden;
 }
+header {
+  padding: 8px 2px;
+}
 .content-area {
   position: absolute;
   top: 52px;

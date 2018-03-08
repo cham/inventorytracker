@@ -11,10 +11,10 @@
       </thead>
       <tbody>
         <tr v-for="item in items" :key="item.id">
-          <td>{{item.name}}</td>
+          <td class="namecell">{{item.name}}</td>
           <td>{{item.cost}} gp</td>
           <td>{{item.weight}} lb.</td>
-          <td>
+          <td class="buttoncell">
             <button :disabled="item.type !== 'custom'" @click="confirmDeleteItem = true;idToDelete = item.id">Delete</button>
           </td>
         </tr>
@@ -70,5 +70,12 @@ table {
 }
 th {
   text-align: left;
+}
+.namecell {
+  padding-left: 6px;
+}
+.buttoncell {
+  text-align: right;
+  padding-right: 6px;
 }
 </style>

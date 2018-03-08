@@ -6,11 +6,13 @@
         <span @click="onClickPrefill" class="nameinput-prefill" ref="prefilltext">{{prefillName}}</span>
       </div>
       x
-      <input ref="newitemquantity" type="number">
+      <input ref="newitemquantity" type="number" value="1">
       <button @click="onAddInventoryItem">Add</button>
     </fieldset>
-    <div v-for="item in player.inventory" :key="item.id">
-      {{getItemName(item.id)}} x {{item.quantity}}
+    <div class="playerinventory--items">
+      <div v-for="item in player.inventory" :key="item.id">
+        {{getItemName(item.id)}} x {{item.quantity}}
+      </div>
     </div>
   </div>
 </template>
@@ -93,6 +95,10 @@ export default {
 <style scoped>
 .playerinventory {
   display: inline-block;
+}
+.playerinventory--items {
+  height: 275px;
+  overflow: auto;
 }
 input {
   margin-left: 0

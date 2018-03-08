@@ -3,7 +3,7 @@
     <table>
       <thead>
         <tr>
-          <th>Name</th>
+          <th class="namecell">Name</th>
           <th>Str</th>
           <th>Weight</th>
           <th>Encumbrance</th>
@@ -13,12 +13,12 @@
       </thead>
       <tbody>
         <tr v-for="player in players" :key="player.id">
-          <td>{{player.name}}</td>
+          <td class="namecell">{{player.name}}</td>
           <td>{{player.strength}}</td>
           <td>{{player.totalWeight}}</td>
           <td>{{playerEncumbranceType(player)}}</td>
           <td>{{playerAvailableMovement(player)}}</td>
-          <td>
+          <td class="buttoncell">
             <button @click="showEditPlayer = true;playerToEdit = player">Edit</button>
             <button @click="confirmDeletePlayer = true;idToDelete = player.id">Delete</button>
           </td>
@@ -109,5 +109,12 @@ table {
 }
 th {
   text-align: left;
+}
+.namecell {
+  padding-left: 6px;
+}
+.buttoncell {
+  text-align: right;
+  padding-right: 6px;
 }
 </style>
