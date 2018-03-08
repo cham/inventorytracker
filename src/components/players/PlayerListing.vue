@@ -82,8 +82,11 @@ export default {
       if (player.totalWeight >= player.strength * 10) {
         return 'Heavily Encumbered'
       }
+      if (player.totalWeight >= player.strength * 7.5) {
+        return 'Moderately Encumbered'
+      }
       if (player.totalWeight >= player.strength * 5) {
-        return 'Encumbered'
+        return 'Lightly Encumbered'
       }
       return 'Unencumbered'
     },
@@ -93,6 +96,9 @@ export default {
       }
       if (player.totalWeight >= player.strength * 10) {
         return player.movement - 20
+      }
+      if (player.totalWeight >= player.strength * 7.5) {
+        return player.movement - 15
       }
       if (player.totalWeight >= player.strength * 5) {
         return player.movement - 10
