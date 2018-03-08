@@ -1,10 +1,6 @@
 <template>
   <fieldset>
     <p>
-      <label>Name</label>
-      <input type="text" v-model="name">
-    </p>
-    <p>
       <label>Strength</label>
       <input type="number" v-model="strength">
     </p>
@@ -15,9 +11,6 @@
     <p>
       <label>Inventory</label>
       <player-inventory v-bind:player="player"></player-inventory>
-    </p>
-    <p>
-      <button @click="doEditPlayer">Edit</button>
     </p>
   </fieldset>
 </template>
@@ -33,7 +26,6 @@ export default {
   },
   data () {
     return {
-      name: this.player.name,
       strength: this.player.strength,
       movement: this.player.movement,
       inventory: this.player.inventory
@@ -46,12 +38,18 @@ export default {
     doEditPlayer () {
       this.editPlayer({
         id: this.player.id,
-        name: this.name,
         strength: this.strength,
         movement: this.movement,
         inventory: this.inventory
       })
-      this.$emit('cancel')
+    }
+  },
+  watch: {
+    strength () {
+      this.doEditPlayer()
+    },
+    movement () {
+      this.doEditPlayer()
     }
   }
 }
